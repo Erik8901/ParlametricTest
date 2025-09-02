@@ -1,0 +1,14 @@
+<div class="login-container">
+    <div class="top">
+        <img class="logo-header" src="parlametric_logo.png" alt="image" />
+        <span class="sign-in-txt">Sign In</span>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+        <label class="user-email">Email</label>
+        <input type="email" name="username" placeholder="Enter you email" [(ngModel)]="userName" required>
+        <label class="user-password">Password</label>
+        <input type="current-password" name="username" placeholder="Enter your password" [(ngModel)]="userPassword"
+            required>
+        <button type="submit">Sign in</button>
+    </form>
+</div>

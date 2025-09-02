@@ -1,0 +1,61 @@
+.login-container {
+    width: 40vw;
+    margin: 0 auto;
+    margin-top: 10rem;
+    background: #FEF3C7;
+    padding: 3rem;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+img {
+    width: 8rem;
+}
+
+.sign-in-txt {
+    font-size: 1.3rem;
+}
+
+input {
+    height: 3rem;
+    padding-left: 2rem;
+    border-radius: 10px;
+    border: 1px solid #000
+}
+
+.user-email,
+.user-password {
+    color: #585858;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+button {
+    background: #FFB600;
+    height: 3rem;
+    border-radius: 20px;
+    border: 0;
+    color: #11111C;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #ffff;
+}
+
+@media only screen and (max-width: 1000px) {
+    .login-container {
+        width: auto;
+        margin-top: unset;
+    }
+}

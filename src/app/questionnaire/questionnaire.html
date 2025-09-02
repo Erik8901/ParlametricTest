@@ -1,0 +1,37 @@
+<div class="questionnaire">
+    <form (ngSubmit)="onSubmitQuestions()">
+        <!-- <label>How did you find out about Parlametric?</label>
+        <input class="new-question" [(ngModel)]="q1" name="first" />
+        <label>Would you use Parlametric in the future?</label>
+        <input class="new-question" [(ngModel)]="q2" name="first" /> -->
+        <ul class="questions-container">
+            <div *ngFor="let question of questions; let i = index">
+                <span class="color-container">{{question.question}}</span>
+                <input class="anwser" name="test" [(ngModel)]="userAnwser.split(' ')[i]" />
+            </div>
+        </ul>
+        <ul class="multi-choice-questions-container">
+            <li *ngFor="let question of multiChoiceQuestions">
+                <span class="color-container">{{question.question}}</span>
+                <label>
+                    <input type="radio" name="color1" value="1"> 1 </label>
+                <label>
+                    <input type="radio" name="color2" value="2"> 2</label>
+                <label>
+                    <input type="radio" name="color3" value="3"> 3 </label>
+                <label>
+                    <input type="radio" name="color4" value="4"> 4 </label>
+                <label>
+                    <input type="radio" name="color5" value="5"> 5 </label>
+            </li>
+        </ul>
+        <button>Submit Anwsers!</button>
+    </form> @if(isAdmin === true) { <div class="add-new-container">Add new Questions</div>
+    <form (ngSubmit)="addNewQuestions()">
+        <label>Add new question:</label>
+        <input class="new-question" [(ngModel)]="newQuestion" name="first" />
+        <label>Add new multi chioce question:</label>
+        <input class="new-question" [(ngModel)]="newMultiQuestion" name="first" />
+        <button>Add new questions</button>
+    </form>}
+</div>

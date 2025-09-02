@@ -1,0 +1,23 @@
+.header {
+    background: #11161c;
+    height: 50px;
+    color: #fff;
+    justify-content: space-between;
+    padding: 0 4rem 0 3rem;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.logo-header {
+    width: 10rem;
+}
+
+.login {
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.login:hover {
+    text-decoration: underline;
+}
