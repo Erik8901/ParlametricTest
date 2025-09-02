@@ -1,28 +1,29 @@
 <div class="questionnaire">
     <form (ngSubmit)="onSubmitQuestions()">
-        <!-- <label>How did you find out about Parlametric?</label>
-        <input class="new-question" [(ngModel)]="q1" name="first" />
-        <label>Would you use Parlametric in the future?</label>
-        <input class="new-question" [(ngModel)]="q2" name="first" /> -->
         <ul class="questions-container">
             <div *ngFor="let question of questions; let i = index">
                 <span class="color-container">{{question.question}}</span>
-                <input class="anwser" name="test" [(ngModel)]="userAnwser.split(' ')[i]" />
+                <input class="anwser" name="userAnwsers" [(ngModel)]="userAnwsers[i]" />
             </div>
         </ul>
         <ul class="multi-choice-questions-container">
-            <li *ngFor="let question of multiChoiceQuestions">
+            <li *ngFor="let question of multiChoiceQuestions; let i = index">
                 <span class="color-container">{{question.question}}</span>
                 <label>
-                    <input type="radio" name="color1" value="1"> 1 </label>
+                    <input type="radio" name="userMultiAnwsers" value="1" [(ngModel)]="userMultiAnwsers[i]" />
+                </label>
                 <label>
-                    <input type="radio" name="color2" value="2"> 2</label>
+                    <input type="radio" name="userMultiAnwsers" value="2" [(ngModel)]="userMultiAnwsers[i]" /> 2
+                </label>
                 <label>
-                    <input type="radio" name="color3" value="3"> 3 </label>
+                    <input type="radio" name="userMultiAnwsers" value="3" [(ngModel)]="userMultiAnwsers[i]" /> 3
+                </label>
                 <label>
-                    <input type="radio" name="color4" value="4"> 4 </label>
+                    <input type="radio" name="userMultiAnwsers" value="4" [(ngModel)]="userMultiAnwsers[i]" /> 4
+                </label>
                 <label>
-                    <input type="radio" name="color5" value="5"> 5 </label>
+                    <input type="radio" name="userMultiAnwsers" value="5" [(ngModel)]="userMultiAnwsers[i]" /> 5
+                </label>
             </li>
         </ul>
         <button>Submit Anwsers!</button>

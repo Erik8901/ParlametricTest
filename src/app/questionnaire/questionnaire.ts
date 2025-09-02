@@ -15,8 +15,7 @@ export class Questionnaire {
   newMultiQuestion = ""
   userAnwser = ""
   userAnwsers = []
-
-
+  userMultiAnwsers = [];
 
   questions: Array<any> = [
     { question: 'How did you find out about Parlametric?' },
@@ -24,6 +23,8 @@ export class Questionnaire {
   ];
   multiChoiceQuestions: Array<any> = [
     { question: 'How would you rate Paralmetric?' },
+    { question: 'How would you rate Parlametric customer service?' },
+    { question: 'How would you rate Parlametric customer service?' },
     { question: 'How would you rate Parlametric customer service?' },
   ]
 
@@ -33,8 +34,8 @@ export class Questionnaire {
   // }
 
   onSubmitQuestions() {
-    console.log(this.userAnwser)
-
+    console.log(this.userAnwsers)
+    console.log(this.userMultiAnwsers)
   }
 
   addNewQuestions() {
