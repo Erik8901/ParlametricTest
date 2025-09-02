@@ -1,0 +1,11 @@
+<main class="main">
+  <div class="content">
+    <div class="header">
+      <img class="logo-header" src="parlametric_logo.png" alt="image" />
+      <span class="login" (click)="loginUser()">Login</span>
+      <!-- <span class="login">Logged in as Admn</span> -->
+    </div> @if(showLogin){ <app-login-modal (dataEvent)="handleDataFromChild($event)" /> } @else { <app-questionnaire
+      [isAdmin]="adminIsLoggedIn" /> }
+  </div>
+</main>
+<router-outlet />
