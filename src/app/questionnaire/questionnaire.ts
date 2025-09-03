@@ -33,6 +33,10 @@ export class Questionnaire {
   //   console.log(this.isAdmin)
   // }
 
+  onSubmitQuestionsTest() {
+
+  }
+
   onSubmitQuestions() {
     console.log(this.userAnwsers)
     console.log(this.userMultiAnwsers)
