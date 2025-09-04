@@ -1,3 +1,82 @@
+.questionnaire {
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 3rem;
+    background: #FEF3C7;
+    padding: 3rem;
+    font-family: "TTCommonsClassic-Medium", sans-serif;
+    border-radius: 2rem;
+}
+
+h1 {
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 2rem 0;
+    color: #FFB600;
+}
+
+.questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+input {
+    padding-left: 1rem;
+    border-radius: 0px;
+    border: 1px solid #000;
+    cursor: pointer;
+    height: 2rem;
+}
+
+.radio {
+    height: unset;
+    accent-color: #FFB600;
+    border: none;
+}
+
 li {
     list-style: none;
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.labels {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    background: #FFB600;
+    height: 3rem;
+    border-radius: 20px;
+    border: 0;
+    color: #11111C;
+    cursor: pointer;
+    display: table;
+    width: 40%;
+    margin: 0 auto;
+}
+
+button:hover {
+    color: #ffff;
+}
+
+@media only screen and (max-width: 1000px) {
+    .questionnaire {
+        width: unset;
+        margin: unset;
+        border-radius: unset;
+    }
+
+    button {
+        width: 90%;
+    }
+
+    ul {
+        all: unset;
+    }
 }

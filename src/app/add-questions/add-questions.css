@@ -1,37 +1,20 @@
-.login-container {
+.add-questions-container {
     width: 40vw;
     margin: 0 auto;
     margin-top: 10rem;
     background: #FEF3C7;
     padding: 3rem;
+    font-family: "TTCommonsClassic-Medium", sans-serif;
     border-radius: 2rem;
 }
 
-.top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-img {
-    width: 8rem;
-}
-
-.sign-in-txt {
-    font-size: 1.3rem;
-    font-family: "TTCommonsClassic-Medium", sans-serif;
-}
-
-input {
-    height: 3rem;
-    padding-left: 2rem;
-    border-radius: 10px;
-    border: 1px solid #000
-}
-
-.user-email,
-.user-password {
-    color: #585858;
+.add-new-txt {
+    display: table;
+    margin: 0 auto;
+    color: #11111c;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2em;
 }
 
 form {
@@ -39,6 +22,13 @@ form {
     flex-direction: column;
     gap: 2rem;
     margin-top: 3rem;
+}
+
+input {
+    height: 3rem;
+    padding-left: 2rem;
+    border-radius: 10px;
+    border: 1px solid #000;
 }
 
 button {
@@ -56,7 +46,7 @@ button:hover {
 }
 
 @media only screen and (max-width: 1000px) {
-    .login-container {
+    .add-questions-container {
         width: auto;
         margin-top: unset;
         border-radius: unset;

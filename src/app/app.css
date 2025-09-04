@@ -11,6 +11,7 @@
 
 .logo-header {
     width: 10rem;
+    cursor: pointer;
 }
 
 .login {

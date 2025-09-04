@@ -5,10 +5,11 @@
     </div>
     <form (ngSubmit)="onSubmit()">
         <label class="user-email">Email</label>
-        <input type="email" name="username" placeholder="Enter you email" [(ngModel)]="userName" required>
-        <label class="user-password">Password</label>
-        <input type="current-password" name="username" placeholder="Enter your password" [(ngModel)]="userPassword"
+        <input type="email" name="username" placeholder="Enter you email" autocomplete="on" [(ngModel)]="userName"
             required>
+        <label class="user-password">Password</label>
+        <input type="password" name="username" placeholder="Enter your password" autocomplete="on"
+            [(ngModel)]="userPassword" required>
         <button type="submit">Sign in</button>
     </form>
 </div>

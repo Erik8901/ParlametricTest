@@ -1,0 +1,10 @@
+<div class="add-questions-container">
+    <span class="add-new-txt"> Add new Questions</span>
+    <form (ngSubmit)="addNewQuestions()">
+        <label>Add new question:</label>
+        <input class="new-question" [(ngModel)]="newQuestion" name="first" />
+        <label>Add new multichioce question:</label>
+        <input class="new-question" [(ngModel)]="newMultiQuestion" name="first" />
+        <button>Add new questions</button>
+    </form>
+</div>

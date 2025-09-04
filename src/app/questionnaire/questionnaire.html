@@ -1,7 +1,8 @@
 <div class="questionnaire">
+    <h1>Parlametric Customer Servey</h1>
     <form (ngSubmit)="onSubmitQuestions()">
-        <ul class="questions-container">
-            <div *ngFor="let question of questions; let i = index">
+        <ul>
+            <div class="questions-container" *ngFor="let question of questions; let i = index">
                 <span class="color-container">{{question.question}}</span>
                 <input class="anwser" name="userAnwsers" [(ngModel)]="userAnwsers[i]" />
             </div>
@@ -9,30 +10,25 @@
         <ul class="multi-choice-questions-container">
             <li *ngFor="let question of multiChoiceQuestions; let i = index">
                 <span class="color-container">{{question.question}}</span>
-                <label>
-                    <input type="radio" [name]="'userMultiAnwsers' + i" value="1" [(ngModel)]="userMultiAnwsers[i]" /> 1
-                </label>
-                <label>
-                    <input type="radio" [name]="'userMultiAnwsers' + i" value="2" [(ngModel)]="userMultiAnwsers[i]" /> 2
-                </label>
-                <label>
-                    <input type="radio" [name]="'userMultiAnwsers' + i" value="3" [(ngModel)]="userMultiAnwsers[i]" /> 3
-                </label>
-                <label>
-                    <input type="radio" [name]="'userMultiAnwsers' + i" value="4" [(ngModel)]="userMultiAnwsers[i]" /> 4
-                </label>
-                <label>
-                    <input type="radio" [name]="'userMultiAnwsers' + i" value="5" [(ngModel)]="userMultiAnwsers[i]" /> 5
-                </label>
+                <div class="labels">
+                    <label>
+                        <input class="radio" type="radio" [name]="'userMultiAnwsers' + i" value="1"
+                            [(ngModel)]="userMultiAnwsers[i]" /> 1 </label>
+                    <label>
+                        <input class="radio" type="radio" [name]="'userMultiAnwsers' + i" value="2"
+                            [(ngModel)]="userMultiAnwsers[i]" /> 2 </label>
+                    <label>
+                        <input class="radio" type="radio" [name]="'userMultiAnwsers' + i" value="3"
+                            [(ngModel)]="userMultiAnwsers[i]" /> 3 </label>
+                    <label>
+                        <input class="radio" type="radio" [name]="'userMultiAnwsers' + i" value="4"
+                            [(ngModel)]="userMultiAnwsers[i]" /> 4 </label>
+                    <label>
+                        <input class="radio" type="radio" [name]="'userMultiAnwsers' + i" value="5"
+                            [(ngModel)]="userMultiAnwsers[i]" /> 5 </label>
+                </div>
             </li>
         </ul>
         <button>Submit Anwsers!</button>
-    </form> @if(isAdmin === true) { <div class="add-new-container">Add new Questions</div>
-    <form (ngSubmit)="addNewQuestions()">
-        <label>Add new question:</label>
-        <input class="new-question" [(ngModel)]="newQuestion" name="first" />
-        <label>Add new multi chioce question:</label>
-        <input class="new-question" [(ngModel)]="newMultiQuestion" name="first" />
-        <button>Add new questions</button>
-    </form>}
+    </form>
 </div>

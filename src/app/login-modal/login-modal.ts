@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -7,22 +7,18 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './login-modal.html',
   styleUrl: './login-modal.css'
 })
-export class LoginModal {
-  @Output() dataEvent = new EventEmitter<boolean>();
 
+export class LoginModal {
   userName = ""
   userPassword = ""
   loggedInAsAdmin = false;
 
   onSubmit() {
-    // if (this.userName === "admin" && this.userPassword === "password") {
-    //   this.loggedInAsAdmin = !this.loggedInAsAdmin
-    //   this.dataEvent.emit(this.loggedInAsAdmin);
-    // } else {
-    //   this.loggedInAsAdmin = false;
-    // }
-    this.loggedInAsAdmin = !this.loggedInAsAdmin
-    this.dataEvent.emit(this.loggedInAsAdmin);
+    if (this.userName === "admin" && this.userPassword === "password") {
+      this.loggedInAsAdmin = !this.loggedInAsAdmin
+      window.location.href = 'add-questions';
+    } else {
+      this.loggedInAsAdmin = false;
+    }
   }
-
 }
